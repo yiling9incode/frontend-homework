@@ -1,0 +1,46 @@
+.main,.footer{
+    margin:0 auto;
+    width: 640px;
+}
+
+.main{
+    display: flex;
+}
+
+.article{
+    margin-right: 20px;
+}
+
+.article-content{
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.article-content img{
+    width: 96px;
+    height: 96px;
+    margin-right: 20px;
+}
+
+.title h2{
+    font-size:20px; 
+    line-height:1.2;
+}
+
+.title p{
+    font-size:16px; 
+    line-height:1.5;
+}
+
+.ad img{
+    width: 216px;
+    height: 216px;
+}
+
+.footer p{
+    text-align: center;
+    background-color: aliceblue;
+    padding:48px 0;
+    font-size:16px;
+     line-height:1.5;
+}
