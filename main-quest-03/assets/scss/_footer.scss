@@ -1,0 +1,59 @@
+@use "variables";
+
+.footer {
+    background-color: variables.$neutral-100; // #f8f9fa
+
+    .container {
+        padding-top: variables.$spacing-5xl;
+        padding-bottom: variables.$spacing-5xl;
+
+        @media (max-width: 768px) {
+            padding-top: variables.$spacing-xl; // 32px
+            padding-bottom: variables.$spacing-xl; // 32px
+        }
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: variables.$spacing-l; // 24px
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: variables.$spacing-2xl; //40px
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                padding-left: variables.$spacing-s; //12px            
+                gap: 0;
+            }
+        }
+
+    }
+
+    .footer-item {
+        a {
+            display: block;
+            padding-top: variables.$spacing-s;
+            padding-bottom: variables.$spacing-s;
+        }
+    }
+
+    .footer-info {
+        border-top: 1px solid variables.$neutral-300; // #dee2e6
+        padding-top: variables.$spacing-xl; //32px
+
+        text-align: center;
+        color: variables.$text-secondary; // #6c757d
+    }
+
+}
