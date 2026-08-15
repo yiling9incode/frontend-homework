@@ -170,6 +170,34 @@
         .primary-button {
             margin-top: variables.$spacing-3xl;
         }
+
+        width: fit-content;
+        position: relative; // 兩張裝飾圖的定位基準
+
+        .sale-star {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            top: -32px;
+            left: -80px;
+        }
+
+        .sale-sparkle {
+            position: absolute;
+            width: 76px;
+            height: 64px;
+            right: -40px;
+            top: calc(50% + 71px);
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 576px) {
+            .sale-star,
+            .sale-sparkle {
+                display: none;
+            }
+        }
     }
+
 
 }
