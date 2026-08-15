@@ -1,0 +1,14 @@
+@use "variables";
+
+.primary-button {
+    display: inline-block;
+    background-color: variables.$primary-300;
+    color: variables.$neutral-900;
+    padding: variables.$spacing-s variables.$spacing-l;
+    border-radius: variables.$radius-sm;
+    
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}

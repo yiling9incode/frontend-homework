@@ -1,4 +1,4 @@
-
+@use "variables";
 
 .display-1 {
   font-size: 64px;
@@ -106,4 +106,16 @@
 
 .fw-bold {
   font-weight: 700;
+}
+
+.primary-300 {
+  color: variables.$primary-300;
+}
+
+.neutral-0 {
+  color: variables.$neutral-0;
+}
+
+.neutral-500 {
+  color: variables.$neutral-500;
 }

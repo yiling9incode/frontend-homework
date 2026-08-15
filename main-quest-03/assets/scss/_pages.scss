@@ -24,12 +24,7 @@
         margin-bottom: variables.$spacing-m;
     }
 
-    .hero-button {
-        display: inline-block;
-        background-color: variables.$primary-300;
-        color: variables.$neutral-900;
-        padding: variables.$spacing-s variables.$spacing-l;
-        border-radius: variables.$radius-sm;
+    .primary-button {
         margin-top: variables.$spacing-3xl;
     }
 
@@ -57,7 +52,7 @@
             letter-spacing: 0.05em;
         }
 
-        .hero-button {
+        .primary-button {
             margin-top: variables.$spacing-xl; //32px
         }
     }
@@ -65,8 +60,8 @@
 
 //index-new-arrivals
 .new-arrivals {
-    padding-top: variables.$spacing-5xl;
-    padding-bottom: variables.$spacing-5xl;
+    margin-top: variables.$spacing-5xl;
+    margin-bottom: variables.$spacing-5xl;
 
     .new-arrivals-title {
         text-align: center;
@@ -113,6 +108,8 @@
 
 //index-best-seller
 .best-seller {
+    margin-bottom: variables.$spacing-5xl;
+
     .best-seller-title {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -136,4 +133,43 @@
         top: 0;
         left: 0;
     }
+}
+
+//index-sale
+.sale {
+    margin-top: variables.$spacing-3xl;
+    margin-bottom: variables.$spacing-3xl;
+    background-image: url(../assets/img/index/banner-co-branded.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        background-image: url(../assets/img/index/banner-co-branded-sm.png);
+
+    }
+
+    .sale-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        h2 {
+            margin-bottom: variables.$spacing-m;
+        }
+
+        h3 {
+            margin-bottom: variables.$spacing-xl;
+
+        }
+
+        .primary-button {
+            margin-top: variables.$spacing-3xl;
+        }
+    }
+
 }
