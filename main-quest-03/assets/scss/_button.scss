@@ -6,9 +6,17 @@
     color: variables.$neutral-900;
     padding: variables.$spacing-s variables.$spacing-l;
     border-radius: variables.$radius-sm;
-    
+
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: 0.05em;
     font-weight: 500;
+
+    &:hover {
+        color: variables.$primary-500;
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 0px 3px variables.$primary-300;
+    }
 }

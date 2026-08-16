@@ -20,7 +20,7 @@ const bestSellerSwiper = new Swiper(".best-seller-swiper", {
     loop: true,
     slidesPerView: 1.2,
     spaceBetween: 16,
-    // watchOverflow: true,
+    watchOverflow: true,
 
     breakpoints: {
         577: {
