@@ -7,8 +7,8 @@
     align-items: center;
     padding-top: variables.$spacing-m; //16px
     padding-bottom: variables.$spacing-m; //16px
-
   }
+
 }
 
 .navbar-menu {
@@ -45,9 +45,14 @@
 @media (max-width: 576px) {
   .navbar {
     .container {
-      position: relative;
+      //navbar 的 .container 仍繼承全站設定width: calc(100% - 24px);因此左右會各留 12px
+      width: 100%;
+      max-width: none;
+
       padding: 0px;
+      position: relative;
     }
+
   }
 
   .navbar-menu {

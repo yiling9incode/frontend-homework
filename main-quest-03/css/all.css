@@ -205,8 +205,10 @@ a {
 
 @media (max-width: 576px) {
   .navbar .container {
-    position: relative;
+    width: 100%;
+    max-width: none;
     padding: 0px;
+    position: relative;
   }
   .navbar-menu {
     width: 100%;
@@ -407,6 +409,11 @@ a {
   top: 0;
   left: 0;
 }
+@media (max-width: 576px) {
+  .best-seller .best-seller-title {
+    font-size: 24px;
+  }
+}
 
 .sale {
   margin-top: 48px;
@@ -525,23 +532,6 @@ a {
   }
 }
 
-@media (max-width: 768px) {
-  .series {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .series .series-title {
-    font-size: 24px;
-  }
-  .series .series-list {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 12px;
-  }
-  .series .series-card .series-card-text {
-    font-size: 16px;
-  }
-}
 .series {
   margin-top: 64px;
   margin-bottom: 64px;
@@ -589,10 +579,34 @@ a {
   line-height: 1.2;
   letter-spacing: 0.05em;
 }
+@media (max-width: 768px) {
+  .series {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .series .series-title {
+    font-size: 24px;
+  }
+  .series .series-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .series .series-card .series-card-text {
+    font-size: 16px;
+  }
+}
 
 .style {
   margin-top: 64px;
   margin-bottom: 64px;
+}
+.style .style-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
 }
 .style .style-list {
   display: grid;
@@ -617,4 +631,16 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width: 768px) {
+  .style {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .style .style-title {
+    font-size: 24px;
+  }
+  .style .style-list {
+    display: flex;
+  }
 }/*# sourceMappingURL=all.css.map */

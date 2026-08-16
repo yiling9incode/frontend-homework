@@ -29,3 +29,17 @@ const bestSellerSwiper = new Swiper(".best-seller-swiper", {
         },
     },
 });
+
+const styleSwiper = new Swiper(".style-swiper", {
+    loop: true,
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    watchOverflow: true,
+
+    breakpoints: {
+        577: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+        },
+    },
+});
