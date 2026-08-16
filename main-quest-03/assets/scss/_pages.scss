@@ -222,8 +222,9 @@
         margin-bottom: variables.$spacing-l; //24px
 
         background-image: url(../assets/img/index/banner-co-branded-sm.png);
-        padding-top: variables.$spacing-5xl; //64px
-        padding-bottom: variables.$spacing-5xl; //64px
+        // padding-top: variables.$spacing-5xl; //64px
+        // padding-bottom: variables.$spacing-5xl; //64px
+        pdaaing: 64px 12px 64px 12px;
 
         .sale-content {
             width: 100%;

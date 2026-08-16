@@ -475,8 +475,7 @@ a {
     margin-top: 24px;
     margin-bottom: 24px;
     background-image: url(../assets/img/index/banner-co-branded-sm.png);
-    padding-top: 64px;
-    padding-bottom: 64px;
+    pdaaing: 64px 12px 64px 12px;
   }
   .sale .sale-content {
     width: 100%;
