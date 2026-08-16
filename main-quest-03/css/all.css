@@ -407,19 +407,39 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-@media (max-width: 768px) {
-  .sale {
-    background-image: url(../assets/img/index/banner-co-branded-sm.png);
-  }
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .sale .sale-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+}
+.sale .sale-content .sale-title {
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.sale .sale-content .sale-x {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #c0fa73;
+}
+.sale .sale-content .sale-description {
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: #adb5bd;
 }
 .sale .sale-content h2 {
   margin-bottom: 16px;
@@ -432,6 +452,7 @@ a {
 }
 .sale .sale-content {
   width: fit-content;
+  margin: 0 auto;
   position: relative;
 }
 .sale .sale-content .sale-star {
@@ -450,8 +471,50 @@ a {
   transform: translateY(-50%);
 }
 @media (max-width: 576px) {
-  .sale .sale-content .sale-star,
+  .sale {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-image: url(../assets/img/index/banner-co-branded-sm.png);
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .sale .sale-content {
+    width: 100%;
+  }
+  .sale .sale-content .sale-star {
+    top: -32px;
+    left: -32px;
+    overflow: hidden;
+  }
   .sale .sale-content .sale-sparkle {
+    right: -40px;
+    top: calc(50% + 79px);
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+  .sale .sale-content h3 {
+    font-size: 20px;
+  }
+  .sale .sale-content .sale-title {
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sale .sale-content .sale-x {
+    font-size: 28px;
+  }
+  .sale .sale-content .primary-button {
+    margin-top: 32px;
+  }
+  .sale .sale-content .sale-description {
+    font-size: 16px;
+    text-align: center;
+  }
+  .sale .sale-content .sale-description-line {
+    display: block;
+  }
+  .sale .sale-content .sale-description-comma {
     display: none;
   }
 }/*# sourceMappingURL=all.css.map */

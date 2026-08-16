@@ -144,10 +144,8 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media (max-width: 768px) {
-        background-image: url(../assets/img/index/banner-co-branded-sm.png);
-
-    }
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     .sale-content {
         display: flex;
@@ -155,8 +153,34 @@
         justify-content: center;
         align-items: center;
 
-        padding-top: 100px;
-        padding-bottom: 100px;
+        .sale-title {
+            font-size: 48px;
+            line-height: 1.2;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            color: variables.$neutral-0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .sale-x {
+            font-size: 40px;
+            line-height: 1.2;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            color: variables.$primary-300;
+        }
+
+        .sale-description {
+            font-size: 20px;
+            line-height: 1.5;
+            letter-spacing: 0.05em;
+            font-weight: 400;
+            color: variables.$neutral-500;
+        }
 
         h2 {
             margin-bottom: variables.$spacing-m;
@@ -171,7 +195,8 @@
             margin-top: variables.$spacing-3xl;
         }
 
-        width: fit-content;
+        width: fit-content; //寬度縮到跟內容一樣
+        margin: 0 auto;
         position: relative; // 兩張裝飾圖的定位基準
 
         .sale-star {
@@ -190,14 +215,64 @@
             top: calc(50% + 71px);
             transform: translateY(-50%);
         }
+    }
 
-        @media (max-width: 576px) {
-            .sale-star,
+    @media(max-width:576px) {
+        margin-top: variables.$spacing-l; //24px
+        margin-bottom: variables.$spacing-l; //24px
+
+        background-image: url(../assets/img/index/banner-co-branded-sm.png);
+        padding-top: variables.$spacing-5xl; //64px
+        padding-bottom: variables.$spacing-5xl; //64px
+
+        .sale-content {
+            width: 100%;
+
+            .sale-star {
+                top: -32px;
+                left: -32px;
+                overflow: hidden;
+            }
+
             .sale-sparkle {
+                right: -40px;
+                top: calc(50% + 79px);
+                transform: translateY(-50%);
+                overflow: hidden;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .sale-title {
+                font-size: 32px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .sale-x {
+                font-size: 28px;
+            }
+
+            .primary-button {
+                margin-top: variables.$spacing-xl;
+            }
+
+            .sale-description {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .sale-description-line {
+                display: block;
+            }
+
+            .sale-description-comma {
                 display: none;
             }
         }
     }
-
-
 }
