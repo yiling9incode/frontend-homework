@@ -30,16 +30,27 @@ const bestSellerSwiper = new Swiper(".best-seller-swiper", {
     },
 });
 
-const styleSwiper = new Swiper(".style-swiper", {
-    loop: true,
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    watchOverflow: true,
+//style swiper
+let styleSwiper = null;
 
-    breakpoints: {
-        577: {
-            slidesPerView: 4,
-            spaceBetween: 24,
-        },
-    },
-});
+const styleMedia = window.matchMedia("(max-width: 768px)");
+
+function toggleStyleSwiper(event = styleMedia) {
+  if (event.matches && styleSwiper === null) {
+    // 手機版：啟動輪播
+    styleSwiper = new Swiper(".style-swiper", {
+      loop: true,
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      watchOverflow: true,
+    });
+  } else if (!event.matches && styleSwiper !== null) {
+    // 桌機版：關閉輪播並清除 Swiper 寫入的樣式
+    styleSwiper.destroy(true, true);
+    styleSwiper = null;
+  }
+}
+
+toggleStyleSwiper();
+
+styleMedia.addEventListener("change", toggleStyleSwiper);

@@ -98,10 +98,14 @@
             letter-spacing: 0.05em;
         }
 
-        .new-arrivals-list h3 {
-            font-size: 16px;
-            line-height: 1.2;
-            letter-spacing: 0.05em;
+        .new-arrivals-list {
+            gap: variables.$spacing-l variables.$spacing-s;
+
+            h3 {
+                font-size: 16px;
+                line-height: 1.2;
+                letter-spacing: 0.05em;
+            }
         }
     }
 }
@@ -337,6 +341,9 @@
             line-height: 1.2;
             letter-spacing: 0.05em;
 
+            .serie-text {
+                font-size: 24px;
+            }
         }
     }
 
@@ -362,33 +369,38 @@
     }
 }
 
+//index-style
 .style {
-    margin-top: variables.$spacing-5xl; //64px
-    margin-bottom: variables.$spacing-5xl; //64px
+    margin-top: variables.$spacing-5xl;
+    margin-bottom: 112px;
 
     .style-title {
+        margin-bottom: variables.$spacing-m;
+
         font-weight: 700;
         font-size: 32px;
         line-height: 1.2;
         letter-spacing: 0.05em;
-        margin-bottom: variables.$spacing-m;
     }
 
     .style-list {
         display: grid;
-        grid-template-columns: repeat(6, 1fr); // 6個等寬欄
-        grid-template-rows: repeat(3, 1fr); // 3個等高列
-        gap: 4px;
-        aspect-ratio: 2 / 1;
+
+        // minmax(0, 1fr) 可避免圖片內容把欄位撐寬
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+
+        gap: 8px;
+        aspect-ratio: 1296 / 644; //盒子的首選縱横比为指定的 width / height 比率
 
         .large-right {
-            grid-column: 5 / span 2; //從第 5 欄開始，占用 2 欄
-            grid-row: 1 / span 2; //從第 1 列開始，占用 2 列
+            grid-column: 5 / span 2; //從第5欄算起佔2欄
+            grid-row: 1 / span 2; //從第1列算起佔2列
         }
 
         .large-left {
-            grid-column: 1 / span 2; //從第 1 欄開始，占用 2 欄
-            grid-row: 2 / span 2; //從第 2 列開始，占用 2 列
+            grid-column: 1 / span 2; //從第欄算起佔2欄
+            grid-row: 2 / span 2; //從第2列算起佔2列
         }
 
         li {
@@ -403,9 +415,9 @@
         }
     }
 
-    @media (max-width:768px) {
-        margin-top: variables.$spacing-2xl; //40px
-        margin-bottom: variables.$spacing-2xl; //40px
+    @media (max-width: 768px) {
+        margin-top: variables.$spacing-2xl;
+        margin-bottom: variables.$spacing-2xl;
 
         .style-title {
             font-size: 24px;
@@ -413,6 +425,49 @@
 
         .style-list {
             display: flex;
+            gap: 0;
+            aspect-ratio: auto;
+
+            .swiper-slide {
+                height: auto;
+            }
+
+            img {
+                height: auto;
+                aspect-ratio: 1 / 1; //寬和高一樣，也就是正方形
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+//call to action
+.cta {
+    background-color: variables.$primary-200;
+
+    .cta-content {
+        padding-top: variables.$spacing-l;
+        padding-bottom: variables.$spacing-l;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        margin-right: variables.$spacing-l;
+    }
+
+    @media (max-width: 768px) {
+        .cta-content {
+            padding: variables.$spacing-xl variables.$spacing-l;
+        }
+
+        .cta-title {
+            font-size: 20px;
         }
     }
 }

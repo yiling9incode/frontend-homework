@@ -164,6 +164,24 @@ a {
   box-shadow: 0px 0px 0px 3px #c0fa73;
 }
 
+.dark-button {
+  display: inline-block;
+  background-color: #212529;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+.dark-button:hover {
+  background-color: #495057;
+}
+.dark-button:focus {
+  box-shadow: 0px 0px 0px 3px #495057;
+}
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -377,6 +395,9 @@ a {
     line-height: 1.2;
     letter-spacing: 0.05em;
   }
+  .new-arrivals .new-arrivals-list {
+    gap: 24px 12px;
+  }
   .new-arrivals .new-arrivals-list h3 {
     font-size: 16px;
     line-height: 1.2;
@@ -579,6 +600,9 @@ a {
   line-height: 1.2;
   letter-spacing: 0.05em;
 }
+.series .series-card .series-card-text .serie-text {
+  font-size: 24px;
+}
 @media (max-width: 768px) {
   .series {
     margin-top: 40px;
@@ -599,21 +623,21 @@ a {
 
 .style {
   margin-top: 64px;
-  margin-bottom: 64px;
+  margin-bottom: 112px;
 }
 .style .style-title {
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.2;
   letter-spacing: 0.05em;
-  margin-bottom: 16px;
 }
 .style .style-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 4px;
-  aspect-ratio: 2/1;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  aspect-ratio: 1296/644;
 }
 .style .style-list .large-right {
   grid-column: 5/span 2;
@@ -642,5 +666,41 @@ a {
   }
   .style .style-list {
     display: flex;
+    gap: 0;
+    aspect-ratio: auto;
+  }
+  .style .style-list .swiper-slide {
+    height: auto;
+  }
+  .style .style-list img {
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+
+.cta {
+  background-color: #e8fec5;
+}
+.cta .cta-content {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cta .cta-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin-right: 24px;
+}
+@media (max-width: 768px) {
+  .cta .cta-content {
+    padding: 32px 24px;
+  }
+  .cta .cta-title {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=all.css.map */
