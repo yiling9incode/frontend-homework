@@ -336,7 +336,7 @@ a {
 .hero .primary-button {
   margin-top: 48px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .hero {
     background-image: url("../assets/img/index/banner-sm.png");
     min-height: 480px;
@@ -430,7 +430,7 @@ a {
   top: 0;
   left: 0;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .best-seller .best-seller-title {
     font-size: 24px;
   }
@@ -506,7 +506,7 @@ a {
   top: calc(50% + 71px);
   transform: translateY(-50%);
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .sale {
     margin-top: 24px;
     margin-bottom: 24px;
@@ -600,7 +600,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.05em;
 }
-.series .series-card .series-card-text .serie-text {
+.series .series-card .series-card-text .series-card-description {
   font-size: 24px;
 }
 @media (max-width: 768px) {
@@ -623,7 +623,7 @@ a {
 
 .style {
   margin-top: 64px;
-  margin-bottom: 112px;
+  margin-bottom: 64px;
 }
 .style .style-title {
   margin-bottom: 16px;

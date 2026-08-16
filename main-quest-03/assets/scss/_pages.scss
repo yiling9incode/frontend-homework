@@ -28,7 +28,7 @@
         margin-top: variables.$spacing-3xl;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
         background-image: url("../assets/img/index/banner-sm.png");
 
         min-height: 480px;
@@ -139,7 +139,7 @@
         left: 0;
     }
 
-    @media (max-width:576px) {
+    @media (max-width:768px) {
         .best-seller-title {
             font-size: 24px;
         }
@@ -228,7 +228,7 @@
         }
     }
 
-    @media(max-width:576px) {
+    @media(max-width:768px) {
         margin-top: variables.$spacing-l; //24px
         margin-bottom: variables.$spacing-l; //24px
 
@@ -341,7 +341,7 @@
             line-height: 1.2;
             letter-spacing: 0.05em;
 
-            .serie-text {
+            .series-card-description {
                 font-size: 24px;
             }
         }
@@ -372,7 +372,7 @@
 //index-style
 .style {
     margin-top: variables.$spacing-5xl;
-    margin-bottom: 112px;
+    margin-bottom: variables.$spacing-5xl;
 
     .style-title {
         margin-bottom: variables.$spacing-m;

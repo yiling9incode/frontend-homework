@@ -17,13 +17,13 @@
 // });
 
 const bestSellerSwiper = new Swiper(".best-seller-swiper", {
-    loop: true,
+    loop: false,
     slidesPerView: 1.2,
     spaceBetween: 16,
     watchOverflow: true,
 
     breakpoints: {
-        577: {
+        769: {
             slidesPerView: 4,
             spaceBetween: 24,
         },
