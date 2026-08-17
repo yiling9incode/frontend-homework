@@ -36,6 +36,15 @@
     margin-bottom: variables.$spacing-5xl;
 }
 
+.pb-48 {
+    padding-bottom: variables.$spacing-3xl;
+}
+
+.py-8 {
+    padding-top: variables.$spacing-xs;
+    padding-bottom: variables.$spacing-xs;
+}
+
 .py-12 {
     padding-top: variables.$spacing-s;
     padding-bottom: variables.$spacing-s;
@@ -52,4 +61,20 @@
 
 .mr-12 {
     margin-right: variables.$spacing-s;
+}
+
+.pr-8 {
+    padding-right: variables.$spacing-xs;
+}
+
+.pl-8 {
+    padding-left: variables.$spacing-xs;
+}
+
+.pl-12 {
+    padding-left: variables.$spacing-s;
+}
+
+.pl-24 {
+    padding-left: variables.$spacing-l;
 }

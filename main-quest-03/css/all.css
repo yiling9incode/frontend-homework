@@ -155,6 +155,10 @@ a {
   color: #6c757d;
 }
 
+.neutral-900 {
+  color: #212529;
+}
+
 .danger-300 {
   color: #d74f4f;
 }
@@ -195,6 +199,15 @@ a {
   margin-bottom: 64px;
 }
 
+.pb-48 {
+  padding-bottom: 48px;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .py-12 {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -211,6 +224,22 @@ a {
 
 .mr-12 {
   margin-right: 12px;
+}
+
+.pr-8 {
+  padding-right: 8px;
+}
+
+.pl-8 {
+  padding-left: 8px;
+}
+
+.pl-12 {
+  padding-left: 12px;
+}
+
+.pl-24 {
+  padding-left: 24px;
 }
 
 .primary-button {
@@ -1001,6 +1030,92 @@ a {
 }
 @media (max-width: 768px) {
   .best-seller .best-seller-title {
+    font-size: 20px;
+  }
+}
+
+body {
+  color: #212529;
+}
+
+.story-banner {
+  position: relative;
+  background-image: url("../assets/img/story/hero.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+.story-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.story-banner .story-banner-content {
+  position: relative;
+  z-index: 1;
+}
+.story-banner .story-banner-content .h1 {
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .story-banner {
+    min-height: 240px;
+    background-image: url("../assets/img/story/hero-sm.png");
+  }
+}
+
+.story-container {
+  max-width: 856px;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+.story-container .quote {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5ffe7;
+}
+.story-container .intro img {
+  width: 1076px;
+  margin-left: -110px;
+  margin-right: -110px;
+}
+.story-container .section-lined {
+  border-bottom: solid 1px #dee2e6;
+}
+.story-container .left-lined {
+  border-left: solid 3px #dee2e6;
+}
+.story-container .bi {
+  padding-right: 8px;
+  vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+  .story-banner-content h1 {
+    font-size: 28px;
+  }
+  .story-banner-content p {
+    font-size: 20px;
+  }
+  .story-container .quote {
+    justify-content: flex-start;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 351;
+    height: 260;
+  }
+  .story-container .histoory h2,
+  .story-container .brand-concept h2,
+  .story-container .brand-story h2 {
     font-size: 20px;
   }
 }/*# sourceMappingURL=all.css.map */
