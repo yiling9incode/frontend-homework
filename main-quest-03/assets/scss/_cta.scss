@@ -1,0 +1,31 @@
+@use "variables";
+//call to action
+.cta {
+    background-color: variables.$primary-200;
+
+    .cta-content {
+        padding-top: variables.$spacing-l;
+        padding-bottom: variables.$spacing-l;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        margin-right: variables.$spacing-l;
+    }
+
+    @media (max-width: 768px) {
+        .cta-content {
+            padding: variables.$spacing-xl variables.$spacing-l;
+        }
+
+        .cta-title {
+            font-size: 20px;
+        }
+    }
+}

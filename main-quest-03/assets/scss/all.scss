@@ -11,5 +11,11 @@
 @use "utilities";
 @use "button";
 @use "navbar";
+@use "cta";
 @use "footer";
-@use "pages";
+
+@use "pages/index";
+@use "pages/products";
+@use "pages/product";
+// @use "pages/story";
+// @use "pages/login";

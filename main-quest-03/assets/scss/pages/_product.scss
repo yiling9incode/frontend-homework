@@ -1,0 +1,268 @@
+@use "../variables";
+
+//product產品詳情頁
+.product-page {
+    .product-layout {
+        display: grid;
+
+        // 左邊圖片區＋右邊說明區
+        grid-template-columns: 746px minmax(0, 1fr); //minmax(0, 1fr)控制「右邊欄位」可以縮小
+
+        // 左右兩大區塊的間距
+        gap: variables.$spacing-l; // 24px 圖片區和說明區
+
+        align-items: start;
+
+        margin-top: variables.$spacing-5xl;
+        margin-bottom: variables.$spacing-5xl;
+    }
+
+    //左邊商品圖片
+    .product-gallery {
+        display: grid;
+
+        // 左邊圖片一排兩張
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        // 圖片彼此間距
+        gap: variables.$spacing-xs; // 8px 八張商品圖片之間
+
+        .product-gallery-item {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+    }
+
+
+    //右邊商品詳情
+    .product-description {
+        min-width: 0; //欄位裡的盒子也可以縮小
+
+        //products-麵包屑
+        .breadcrumb {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.05em;
+
+            .breadcrumb-list {
+                display: flex;
+            }
+
+            .breadcrumb-item+.breadcrumb-item::before {
+                content: "/";
+                padding: 0 variables.$spacing-s; //0 12px
+                color: variables.$neutral-300;
+                font-weight: 700;
+            }
+
+            .breadcrumb-item {
+                display: flex;
+            }
+
+            .breadcrumb-link {
+                color: variables.$neutral-600;
+            }
+
+            @media (max-width:768px) {
+                font-size: 14px;
+                margin-bottom: variables.$spacing-xs;
+            }
+        }
+
+        @media (max-width:768px) {
+            .product-title {
+                font-size: 24px;
+                margin-bottom: variables.$spacing-s;
+            }
+        }
+
+        //產品價格
+        .product-price {
+            p {
+                display: flex;
+                align-items: center;
+            }
+
+            @media (max-width:768px) {
+                margin-bottom: variables.$spacing-s;
+
+                p span {
+                    font-size: variables.$spacing-m; //16px
+                }
+
+                p del {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        //產品顏色選擇
+        .product-color-list {
+            display: flex;
+
+            .product-color {
+                width: 64px;
+                text-align: center;
+            }
+        }
+
+        //產品尺寸按鈕
+        .product-size {
+
+            .product-size-list {
+                display: grid;
+
+                // 桌機一排三個，每個最大160px
+                grid-template-columns: repeat(3, minmax(0, 160px));
+                gap: variables.$spacing-xs;
+            }
+
+            .product-size-button {
+                width: 100%;
+
+                // 12px + 24px行高 + 12px = 48px
+                padding: variables.$spacing-s variables.$spacing-l;
+
+                border: 1px solid variables.$neutral-300;
+                border-radius: variables.$radius-sm;
+
+                font-size: 16px;
+                line-height: 1.5;
+                font-weight: 400;
+
+                &.is-selected {
+                    border-color: variables.$neutral-900;
+                }
+
+                &:disabled {
+                    color: variables.$neutral-400;
+                    border-color: variables.$neutral-200;
+                    cursor: not-allowed;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .product-size-list {
+                    // 手機一排兩個，每個最大160px
+                    grid-template-columns: repeat(2, minmax(0, 160px));
+                }
+            }
+        }
+
+        //收藏 預約
+        .product-action {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-areas: "favorite reserve";
+            gap: variables.$spacing-xs;
+        }
+
+        .favorite-button {
+            grid-area: favorite;
+            border: 1px solid variables.$neutral-900;
+            background-color: variables.$neutral-0;
+        }
+
+        .reserve-button {
+            grid-area: reserve;
+            border: 1px solid variables.$neutral-900;
+            background-color: variables.$neutral-900;
+            color: variables.$neutral-0;
+        }
+
+        @media (max-width: 768px) {
+            .product-action {
+                grid-template-columns: minmax(0, 1fr) 48px;
+
+                // 手機交換順序
+                grid-template-areas: "reserve favorite";
+            }
+
+            .favorite-button {
+                width: 48px;
+                height: 48px;
+                padding: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border: 0;
+                background-color: transparent;
+                font-size: 24px;
+            }
+
+            .favorite-label {
+                display: none;
+            }
+
+            .reserve-button {
+                width: 100%;
+            }
+        }
+
+        //商品資訊
+        .product-info-title {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+
+        }
+
+        .product-info-item {
+            p {
+                color: variables.$neutral-600;
+                line-height: 1.5;
+                letter-spacing: 0.05em;
+                font-weight: 400;
+            }
+
+            padding-top: variables.$spacing-s; //12px
+            padding-bottom: variables.$spacing-s; //12px
+            border-bottom: solid 1px variables.$neutral-300;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product-layout {
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin-top: 0;
+        }
+
+        .product-gallery {
+            grid-template-columns: 1fr;
+            margin-bottom: variables.$spacing-l;
+        }
+
+        .product-gallery-item:not(:first-child) {
+            display: none;
+        }
+    }
+}
+
+//你可能喜歡
+.best-seller {
+    .best-seller-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+    }
+
+    @media (max-width:768px) {
+        .best-seller-title {
+            font-size: 20px;
+        }
+    }
+
+}
