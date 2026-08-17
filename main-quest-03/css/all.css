@@ -791,7 +791,7 @@ a {
   border-radius: 0;
   font-weight: 400;
 }
-.products-page .page-item .active {
+.products-page .page-item .btn.active {
   background-color: #c0fa73;
   font-weight: 500;
 }/*# sourceMappingURL=all.css.map */
