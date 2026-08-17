@@ -471,3 +471,91 @@
         }
     }
 }
+
+
+//products產品列表頁
+.products-page {
+
+    //products-麵包屑
+    .breadcrumb-list {
+        display: flex;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: "/";
+        padding: 0 variables.$spacing-s; //0 12px
+        color: variables.$neutral-300;
+        font-weight: 700;
+    }
+
+    .breadcrumb-item {
+        display: flex;
+        font-weight: 500;
+    }
+
+    .breadcrumb-link {
+        color: variables.$neutral-600;
+    }
+
+    //products-左邊選單＋右邊商品
+    .products-layout {
+        display: grid;
+
+        // 左邊分類選單＋右邊商品區
+        grid-template-columns: 200px 1fr;
+        gap: variables.$spacing-l; //24px
+    }
+
+    .products-list {
+        display: grid;
+
+        // 右邊商品一排三張
+        grid-template-columns: repeat(3, 1fr);
+        gap: variables.$spacing-3xl variables.$spacing-l; //48px 24px
+    }
+
+    @media (max-width: 768px) {
+        .products-category {
+            display: none;
+        }
+
+        .products-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .products-list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: variables.$spacing-l variables.$spacing-s //24px 12px;
+        }
+    }
+
+    //products-左邊側欄
+    .category-list {
+        a {
+            display: block;
+        }
+        .active {
+            color: variables.$primary-400;
+        }
+    }
+
+
+    //pagination
+    .pagination-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: variables.$spacing-xs;
+    }
+
+    .page-item .btn {
+        padding: 8px 15px;
+        border-radius: 0;
+        font-weight: 400;
+    }
+
+    .page-item .active {
+        background-color: variables.$primary-300;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,50 @@
+@use "variables";
+
+.mb-4 {
+    margin-bottom: variables.$spacing-xxs;
+}
+
+.mb-8 {
+    margin-bottom: variables.$spacing-xs;
+}
+
+.mb-12 {
+    margin-bottom: variables.$spacing-s;
+}
+
+.mb-16 {
+    margin-bottom: variables.$spacing-m;
+}
+
+.mb-24 {
+    margin-bottom: variables.$spacing-l;
+}
+
+.mb-32 {
+    margin-bottom: variables.$spacing-xl;
+}
+
+.mb-40 {
+    margin-bottom: variables.$spacing-2xl;
+}
+
+.mb-48 {
+    margin-bottom: variables.$spacing-3xl;
+}
+
+.mb-64 {
+    margin-bottom: variables.$spacing-5xl;
+}
+
+.py-12 {
+    padding-top: variables.$spacing-s;
+    padding-bottom: variables.$spacing-s;
+}
+
+.mr-8 {
+    margin-right: variables.$spacing-xs;
+}
+
+.mr-12 {
+    margin-right: variables.$spacing-s;
+}

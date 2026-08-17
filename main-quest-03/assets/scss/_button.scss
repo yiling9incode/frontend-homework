@@ -40,6 +40,19 @@
 
     &:focus {
         box-shadow: 0px 0px 0px 3px variables.$neutral-700;
-        
+
     }
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    border: none;
+    /*改游標成手指模式*/
+    cursor: pointer;
+    /* 背景顏色設定成透明 */
+    background-color: transparent;
 }

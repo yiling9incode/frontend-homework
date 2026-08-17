@@ -1,5 +1,6 @@
 @use "variables";
 
+//字型大小、行高、字元間距
 .display-1 {
   font-size: 64px;
   line-height: 1.2;
@@ -96,6 +97,7 @@
   letter-spacing: 0.05em;
 }
 
+//字重
 .fw-regular {
   font-weight: 400;
 }
@@ -108,6 +110,7 @@
   font-weight: 700;
 }
 
+//顏色
 .primary-300 {
   color: variables.$primary-300;
 }
