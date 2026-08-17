@@ -504,6 +504,8 @@
         // 左邊分類選單＋右邊商品區
         grid-template-columns: 200px 1fr;
         gap: variables.$spacing-l; //24px
+
+        margin-bottom: variables.$spacing-xl;
     }
 
     .products-list {
@@ -512,6 +514,8 @@
         // 右邊商品一排三張
         grid-template-columns: repeat(3, 1fr);
         gap: variables.$spacing-3xl variables.$spacing-l; //48px 24px
+
+        margin-bottom: variables.$spacing-3xl; //48px
     }
 
     @media (max-width: 768px) {
@@ -534,6 +538,7 @@
         a {
             display: block;
         }
+
         .active {
             color: variables.$primary-400;
         }
@@ -558,4 +563,5 @@
         background-color: variables.$primary-300;
         font-weight: 500;
     }
+
 }
