@@ -1129,10 +1129,14 @@ body {
     left: auto;
     transform: none;
   }
+  .story-container .intro h2,
   .story-container .history h2,
   .story-container .brand-concept h2,
   .story-container .brand-story h2 {
     font-size: 20px;
+  }
+  .story-container .intro h3 {
+    font-size: 16px;
   }
   .story-container .history ul {
     list-style-type: disc;

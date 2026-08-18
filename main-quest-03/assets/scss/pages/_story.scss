@@ -121,11 +121,18 @@ body {
             transform: none;
         }
 
+        .intro,
         .history,
         .brand-concept,
         .brand-story {
             h2 {
                 font-size: 20px;
+            }
+        }
+
+        .intro {
+            h3 {
+                font-size: 16px;
             }
         }
 
