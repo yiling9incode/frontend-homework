@@ -50,10 +50,10 @@
 
           <!-- 右側會員內容 -->
           <div class="member-content col-lg-9">
-            <!-- 基本資料 -->
-            <section class="profile-section card mb-lg-4 mb-3" aria-labelledby="profileSectionTitle">
-              <h2 class="profile-section-title mb-4" id="profileSectionTitle">基本資料</h2>
-              <form class="profile-form">
+            <form class="member-settings-form">
+              <!-- 基本資料 -->
+              <section class="profile-section card mb-lg-4 mb-3" aria-labelledby="profileSectionTitle">
+                <h2 class="profile-section-title mb-4" id="profileSectionTitle">基本資料</h2>
                 <div class="row row-cols-1 row-cols-lg-2 ">
 
                   <div class="col">
@@ -98,15 +98,13 @@
                   </div>
 
                 </div>
-              </form>
-            </section>
-            <!-- 通知設定 -->
-            <section class="notification-settings card" aria-labelledby="notificationTitle">
-              <div class="notification-settings-body card-body">
-                <h2 class="notification-settings-title" id="notificationTitle">通知設定</h2>
-                <p class="notification-settings-description">通知將寄送到 helloworld@gmail.com ，如需變更，請至頁面上方的基本資料修改聯絡信箱</p>
+              </section>
+              <!-- 通知設定 -->
+              <section class="notification-settings card" aria-labelledby="notificationTitle">
+                <div class="notification-settings-body card-body">
+                  <h2 class="notification-settings-title" id="notificationTitle">通知設定</h2>
+                  <p class="notification-settings-description">通知將寄送到 helloworld@gmail.com ，如需變更，請至頁面上方的基本資料修改聯絡信箱</p>
 
-                <form class="notification-settings-form">
                   <div class="notification-settings-list">
 
                     <div class="form-check">
@@ -142,11 +140,15 @@
                     </div>
 
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
 
-            <button type="button" class="data-storage-btn btn btn-primary rounded-5 ms-auto ">儲存</button>
+              <div class="data-storage-actions">
+                <button type="button" class="data-storage-btn btn btn-primary rounded-5">
+                  儲存
+                </button>
+              </div>
+            </form>
           </div>
 
         </div>
