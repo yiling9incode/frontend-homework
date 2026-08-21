@@ -11,7 +11,7 @@
 // 手機版：Logo 與訂閱區上下排列
 .footer-top {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 24px;
 
     padding-bottom: 24px;
@@ -48,10 +48,12 @@
     }
 
     .footer-subscription-input {
+        min-width: 0;
         border-radius: 8px 0 0 8px;
     }
 
     .footer-subscription-button {
+        flex: 0 0 57px;
         border-radius: 0 8px 8px 0;
     }
 }
