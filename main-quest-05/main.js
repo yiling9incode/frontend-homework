@@ -1,8 +1,3 @@
-// import './assets/scss/all.scss';
-
-// console.log('Hello world');
-
-
 // Bootstrap 原始樣式
 import 'bootstrap/dist/css/bootstrap.min.css';
 
