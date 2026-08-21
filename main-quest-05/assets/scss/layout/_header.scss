@@ -1,0 +1,262 @@
+.site-header {
+
+  // =========================
+  // Header 共用區域
+  // =========================
+  .navbar-inner {
+    min-height: 64px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  .site-logo {
+    display: block;
+    width: 152px;
+    height: auto;
+  }
+
+  // =========================
+  // 桌機版 Header
+  // =========================
+  .desktop-nav {
+    margin-left: 24px;
+    gap: 16px;
+  }
+
+  // 探索 AI 工具
+  .explore-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+
+    .bi {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+
+  // 桌機搜尋欄
+  .desktop-search {
+    flex: 0 0 301px;
+    width: 301px;
+    height: 42px;
+
+    .form-control {
+      min-width: 0;
+      height: 42px;
+      padding: 0 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+
+      .bi {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+  }
+
+  // 桌機會員中心按鈕
+  .member-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 42px;
+    padding: 0 16px;
+    white-space: nowrap;
+
+    .bi {
+      line-height: 1;
+    }
+  }
+
+  // =========================
+  // 手機版 Header 按鈕
+  // =========================
+  .mobile-actions {
+    height: 64px;
+    gap: 8px;
+  }
+
+  .mobile-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+
+    .bi {
+      color: #212529;
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  // =========================
+  // 手機搜尋 Collapse
+  // =========================
+  .mobile-search {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .mobile-search-form {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+
+    .form-control {
+      min-width: 0;
+      height: 42px;
+      padding: 0 16px;
+    }
+  }
+
+  // 手機搜尋送出按鈕
+  .mobile-search-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    // 後面還有關閉按鈕，因此補回搜尋組的右側圓角
+    border-radius:
+      0 var(--bs-border-radius) var(--bs-border-radius) 0 !important;
+
+    .bi {
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  // 手機搜尋關閉按鈕
+  .mobile-search-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: 4px !important;
+    padding: 8px;
+    border: 0;
+    background-color: transparent;
+
+    .bi {
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  // =========================
+  // 手機版 Offcanvas
+  // =========================
+  .mobile-menu {
+    // Figma：300px 寬
+    --bs-offcanvas-width: 300px;
+
+    .offcanvas-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+      padding: 12px;
+    }
+
+    // Offcanvas 上方標題區
+    .offcanvas-header {
+      position: relative;
+      display: block;
+      padding: 80px 24px 16px 24px;
+
+      // 標題下方的 252px 分隔線
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #dee2e6;
+      }
+    }
+
+    // 右上角關閉按鈕
+    .btn-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      box-sizing: border-box;
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      padding: 8px;
+      background-size: 16px;
+      opacity: 1;
+    }
+
+    // Offcanvas 主要內容
+    .offcanvas-body {
+      min-height: 0;
+      padding: 8px 24px 16px 24px;
+    }
+
+    // 分類選單
+    .list-group {
+      width: 100%;
+    }
+
+    .list-group-item {
+      min-height: 40px;
+      padding: 8px 16px;
+      margin-bottom: 8px 24px;
+      border: 0;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+      color: #212529;
+    }
+
+    // 最下方登入／會員中心按鈕
+    .mobile-menu-account {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 40px;
+      white-space: nowrap;
+    }
+  }
+}
+
+// =========================
+// 桌機版斷點
+// =========================
+@media (min-width: 992px) {
+  .site-header {
+    .navbar-inner {
+      min-height: 74px;
+    }
+  }
+}

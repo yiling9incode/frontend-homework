@@ -1,0 +1,118 @@
+.member-page {
+    background-color: #F8F9FA;
+}
+
+.member-sidebar,
+.profile-section,
+.notification-settings {
+    background-color: #FFFFFF;
+}
+
+.member-profile {
+    padding: 16px 24px 48px 24px;
+
+    .member-profile-avatar {
+        width: 64px;
+        height: 64px;
+        margin: 48px auto 0px auto;
+    }
+
+    .member-profile-name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+
+        @media (min-width:992px) {
+            font-size: 24px;
+        }
+    }
+
+    .member-profile-email {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #6C757D;
+    }
+
+    .member-nav-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #212529;
+    }
+}
+
+.profile-section {
+    padding: 48px;
+
+    .profile-section-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+
+    .form-label {
+        margin-bottom: 4px;
+    }
+
+    .form-label .required {
+        color: #dc3545;
+        margin-left: 4px;
+    }
+
+    .profile-field {
+        gap: 24px;
+    }
+
+    .form-control,
+    .input-group-text {
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        padding: 8px 12px;
+    }
+
+    .input-group .form-control {
+        border-right: none;
+    }
+
+    .input-group-text {
+        background: #fff;
+        color: #868e96;
+    }
+
+}
+
+.notification-settings {
+    padding: 24px 48px;
+    margin-bottom: 24px;
+
+    .notification-settings-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    .form-check {
+        margin-bottom: 24px;
+    }
+
+    .form-check-label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .notification-settings-description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #6C757D;
+        margin-top: 4px;
+    }
+}
+
+.data-storage-btn {
+    width: 81px;
+}
