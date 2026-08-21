@@ -1,15 +1,42 @@
-<footer>
-    <div>
-        <div>
-            <img src="" alt="">
-            <p>訂閱我們，掌握最新 AI 工具與趨勢</p>
-        </div>
-        <form class="input-group desktop-subscription" role="subscription">
-          <input class="form-control" type="search" placeholder="helloworld@gmail.com" aria-label="搜尋 AI 工具">
-          <button class="btn btn-light border" type="submit" aria-label="訂閱">
-            訂閱
-          </button>
-        </form>
-    </div>
+<footer class="site-footer">
+    <div class="footer-container container">
+        <div class="footer-top">
 
+            <!-- Logo -->
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="./index.html" aria-label="返回 AI ToolVerse 首頁">
+                    <img class="footer-logo" src="../assets/images/Logo.png" alt="AI ToolVerse">
+                </a>
+            </div>
+
+            <!-- 電子報訂閱 -->
+            <div class="footer-subscription">
+                <p class="footer-subscription-title">訂閱我們，掌握最新 AI 工具與趨勢</p>
+
+                <form class="footer-subscription-form">
+                    <div class="footer-subscription-group input-group rounded-1">
+                        <label class="visually-hidden" for="subscriptionEmail">
+                            電子信箱
+                        </label>
+                        <input class="footer-subscription-input form-control " type="email" id="subscriptionEmail"
+                            name="subscriptionEmail" placeholder="helloworld@gmail.com">
+
+                        <button class="footer-subscription-button btn btn-primary" type="submit">
+                            訂閱
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                Copyright ©2026 AI ToolVerse
+            </p>
+            <p class="footer-rights">
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
 </footer>

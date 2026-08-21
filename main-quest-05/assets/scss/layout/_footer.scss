@@ -1,0 +1,47 @@
+.site-footer {
+    background-color: #212529;
+}
+
+.footer-container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: solid 1px #6C757D;
+}
+
+.footer-logo {
+    width: 152px;
+    height: auto;
+
+}
+
+.footer-subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .footer-subscription-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #FFFFFF;
+        margin-bottom: 8px;
+    }
+
+
+}
+
+.footer-bottom {
+    color: #BBBBBE;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}

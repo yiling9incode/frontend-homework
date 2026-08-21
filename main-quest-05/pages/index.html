@@ -4,160 +4,370 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- 字體 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+    rel="stylesheet"
+  >
+
   <title>會員中心｜AI ToolVerse</title>
 </head>
 
 <body>
   <%- include('./layout/header.ejs'); %>
 
-    <main class="member-page">
-      <div class="container">
-        <div class="member-layout row g-lg-4 mt-5 mb-3">
+  <main class="member-page">
+    <div class="container">
 
-          <!--  左側會員資料與導覽選單 -->
-          <aside class="member-sidebar col-lg-3 mb-3 mb-lg-0">
-            <div class="member-card card rounded-2">
-              <div class="member-profile card-body text-center">
-                <img src="../assets/images/avatar.png" class="member-profile-avatar" alt="Josh 的會員頭像">
-                <h1 class="member-profile-name">Josh</h1>
-                <p class="member-profile-email">helloworld@gmail.com</p>
-                <span class="member-profile-status badge text-bg-success">
-                  已驗證
-                </span>
-              </div>
-              <!-- 會員中心選單 -->
-              <nav class="member-nav list-group list-group-flush" aria-label="會員中心選單">
-                <a class="member-nav-link list-group-item list-group-item-action active" href="./index.html"
-                  aria-current="page">
-                  <i class="bi bi-person me-2" aria-hidden="true"></i>
-                  個人資料
-                </a>
-                <a class="member-nav-link list-group-item list-group-item-action" href="./my-tools.html">
-                  <i class="bi bi-laptop me-2" aria-hidden="true"></i>
-                  我上架的 AI 工具
-                </a>
-                <a class="member-nav-link list-group-item list-group-item-action" href="#">
-                  <i class="bi bi-list-ul me-2" aria-hidden="true"></i>
-                  我訂閱的 AI 工具
-                </a>
-              </nav>
+      <div class="member-layout row g-lg-4 mt-5 mb-3">
+
+        <!-- 左側會員資料與導覽選單 -->
+        <aside class="member-sidebar col-lg-3 mb-3 mb-lg-0">
+
+          <div class="member-card card rounded-2">
+
+            <div class="member-profile card-body text-center">
+
+              <img
+                src="../assets/images/avatar.png"
+                class="member-profile-avatar"
+                alt="Josh 的會員頭像"
+              >
+
+              <h1 class="member-profile-name">
+                Josh
+              </h1>
+
+              <p class="member-profile-email">
+                helloworld@gmail.com
+              </p>
+
+              <span class="member-profile-status badge text-bg-success">
+                已驗證
+              </span>
+
             </div>
-          </aside>
 
-          <!-- 右側會員內容 -->
-          <div class="member-content col-lg-9">
-            <form class="member-settings-form">
-              <!-- 基本資料 -->
-              <section class="profile-section card mb-lg-4 mb-3" aria-labelledby="profileSectionTitle">
-                <h2 class="profile-section-title mb-4" id="profileSectionTitle">基本資料</h2>
-                <div class="row row-cols-1 row-cols-lg-2 ">
+            <!-- 會員中心選單 -->
+            <nav
+              class="member-nav list-group list-group-flush"
+              aria-label="會員中心選單"
+            >
 
-                  <div class="col">
-                    <div class="profile-field">
-                      <label class="form-label" for="name">姓名<span class="required">*</span></label>
-                      <input type="text" class="form-control" id="name" value="Josh" placeholder="請輸入你的姓名" />
-                    </div>
-                  </div>
+              <a
+                class="member-nav-link list-group-item list-group-item-action active"
+                href="./index.html"
+                aria-current="page"
+              >
+                <i class="bi bi-person me-2" aria-hidden="true"></i>
+                個人資料
+              </a>
 
-                  <div class="col">
-                    <div class="profile-field">
-                      <label class="form-label" for="nickname">暱稱</label>
-                      <input type="text" class="form-control" id="nickname" placeholder="請輸入你的暱稱" />
-                    </div>
-                  </div>
+              <a
+                class="member-nav-link list-group-item list-group-item-action"
+                href="./my-tools.html"
+              >
+                <i class="bi bi-laptop me-2" aria-hidden="true"></i>
+                我上架的 AI 工具
+              </a>
 
-                  <div class="col">
-                    <div class="profile-field">
-                      <label class="form-label" for="birthday">生日<span class="required">*</span></label>
-                      <div class="input-group">
-                        <input type="text" class="form-control" id="birthday" placeholder="請選擇日期" />
-                        <span class="input-group-text">
-                          <i class="bi bi-calendar-check"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+              <a
+                class="member-nav-link list-group-item list-group-item-action"
+                href="#"
+              >
+                <i class="bi bi-list-ul me-2" aria-hidden="true"></i>
+                我訂閱的 AI 工具
+              </a>
 
-                  <div class="col">
-                    <div class="profile-field">
-                      <label class="form-label" for="email">聯絡信箱<span class="required">*</span></label>
-                      <input type="email" class="form-control" id="email" value="helloworld@gmail.com"
-                        placeholder="請輸入你的信箱" />
-                    </div>
-                  </div>
+            </nav>
 
-                  <div class="col">
-                    <div class="profile-field">
-                      <label class="form-label" for="phone">聯絡電話<span class="required">*</span></label>
-                      <input type="tel" class="form-control" id="phone" placeholder="0912345678" />
-                    </div>
-                  </div>
-
-                </div>
-              </section>
-              <!-- 通知設定 -->
-              <section class="notification-settings card" aria-labelledby="notificationTitle">
-                <div class="notification-settings-body card-body">
-                  <h2 class="notification-settings-title" id="notificationTitle">通知設定</h2>
-                  <p class="notification-settings-description">通知將寄送到 helloworld@gmail.com ，如需變更，請至頁面上方的基本資料修改聯絡信箱</p>
-
-                  <div class="notification-settings-list">
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        工具評價與回饋
-                      </label>
-                      <p class="notification-settings-description">即時掌握使用者留下的評價和回饋</p>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        AI 趨勢與最新工具
-                      </label>
-                      <p class="notification-settings-description">推薦適合你的新 AI 工具</p>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        工具功能更新
-                      </label>
-                      <p class="notification-settings-description">當你訂閱的 AI 工具有新功能或重要更新時，我們會寄信通知你</p>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        活動與優惠資訊
-                      </label>
-                      <p class="notification-settings-description">把握平台限時優惠與活動資訊</p>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <div class="data-storage-actions">
-                <button type="button" class="data-storage-btn btn btn-primary rounded-5">
-                  儲存
-                </button>
-              </div>
-            </form>
           </div>
+        </aside>
 
+        <!-- 右側會員內容 -->
+        <div class="member-content col-lg-9">
+
+          <!--
+            基本資料與通知設定共用同一個 form，
+            按下儲存時會一起提交。
+          -->
+          <form class="member-settings-form">
+
+            <!-- 基本資料 -->
+            <section
+              class="profile-section card mb-3 mb-lg-4"
+              aria-labelledby="profileSectionTitle"
+            >
+
+              <h2
+                class="profile-section-title"
+                id="profileSectionTitle"
+              >
+                基本資料
+              </h2>
+
+              <div class="row row-cols-1 row-cols-lg-2 g-3 g-lg-4">
+
+                <!-- 姓名 -->
+                <div class="col">
+                  <div class="profile-field">
+
+                    <label class="form-label" for="name">
+                      姓名<span class="required">*</span>
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="name"
+                      name="name"
+                      value="Josh"
+                      placeholder="請輸入你的姓名"
+                      required
+                    >
+
+                  </div>
+                </div>
+
+                <!-- 暱稱 -->
+                <div class="col">
+                  <div class="profile-field">
+
+                    <label class="form-label" for="nickname">
+                      暱稱
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="nickname"
+                      name="nickname"
+                      placeholder="請輸入你的暱稱"
+                    >
+
+                  </div>
+                </div>
+
+                <!-- 生日 -->
+                <div class="col">
+                  <div class="profile-field">
+
+                    <label class="form-label" for="birthday">
+                      生日<span class="required">*</span>
+                    </label>
+
+                    <div class="input-group">
+
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="birthday"
+                        name="birthday"
+                        placeholder="請選擇日期"
+                        required
+                      >
+
+                      <span class="input-group-text">
+                        <i
+                          class="bi bi-calendar-check"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 聯絡信箱 -->
+                <div class="col">
+                  <div class="profile-field">
+
+                    <label class="form-label" for="email">
+                      聯絡信箱<span class="required">*</span>
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      value="helloworld@gmail.com"
+                      placeholder="請輸入你的信箱"
+                      required
+                    >
+
+                  </div>
+                </div>
+
+                <!-- 聯絡電話 -->
+                <div class="col">
+                  <div class="profile-field">
+
+                    <label class="form-label" for="phone">
+                      聯絡電話<span class="required">*</span>
+                    </label>
+
+                    <input
+                      class="form-control"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="0912345678"
+                      required
+                    >
+
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 通知設定 -->
+            <section
+              class="notification-settings card"
+              aria-labelledby="notificationTitle"
+            >
+
+              <div class="notification-settings-body card-body">
+
+                <h2
+                  class="notification-settings-title"
+                  id="notificationTitle"
+                >
+                  通知設定
+                </h2>
+
+                <p class="notification-settings-description">
+                  通知將寄送到 helloworld@gmail.com，如需變更，請至頁面上方的基本資料修改聯絡信箱
+                </p>
+
+                <div class="notification-settings-list">
+
+                  <!-- 工具評價與回饋 -->
+                  <div class="form-check">
+
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="reviewNotification"
+                      name="notifications"
+                      value="review"
+                    >
+
+                    <label
+                      class="form-check-label"
+                      for="reviewNotification"
+                    >
+                      工具評價與回饋
+                    </label>
+
+                    <p class="notification-settings-description">
+                      即時掌握使用者留下的評價和回饋
+                    </p>
+
+                  </div>
+
+                  <!-- AI 趨勢與最新工具 -->
+                  <div class="form-check">
+
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="trendNotification"
+                      name="notifications"
+                      value="trend"
+                    >
+
+                    <label
+                      class="form-check-label"
+                      for="trendNotification"
+                    >
+                      AI 趨勢與最新工具
+                    </label>
+
+                    <p class="notification-settings-description">
+                      推薦適合你的新 AI 工具
+                    </p>
+
+                  </div>
+
+                  <!-- 工具功能更新 -->
+                  <div class="form-check">
+
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="updateNotification"
+                      name="notifications"
+                      value="update"
+                    >
+
+                    <label
+                      class="form-check-label"
+                      for="updateNotification"
+                    >
+                      工具功能更新
+                    </label>
+
+                    <p class="notification-settings-description">
+                      當你訂閱的 AI 工具有新功能或重要更新時，我們會寄信通知你
+                    </p>
+
+                  </div>
+
+                  <!-- 活動與優惠資訊 -->
+                  <div class="form-check">
+
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="promotionNotification"
+                      name="notifications"
+                      value="promotion"
+                    >
+
+                    <label
+                      class="form-check-label"
+                      for="promotionNotification"
+                    >
+                      活動與優惠資訊
+                    </label>
+
+                    <p class="notification-settings-description">
+                      把握平台限時優惠與活動資訊
+                    </p>
+
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            <!-- 儲存按鈕區 -->
+            <div class="data-storage-actions">
+
+              <button
+                type="submit"
+                class="data-storage-btn btn btn-primary rounded-5"
+              >
+                儲存
+              </button>
+
+            </div>
+
+          </form>
         </div>
+
       </div>
-    </main>
+    </div>
+  </main>
 
-    <%- include('./layout/footer.ejs'); %>
+  <%- include('./layout/footer.ejs'); %>
 
-      <script type="module" src="../main.js"></script>
+  <script type="module" src="../main.js"></script>
 </body>
 
 </html>

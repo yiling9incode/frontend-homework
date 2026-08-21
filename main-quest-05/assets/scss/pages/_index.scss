@@ -1,118 +1,176 @@
 .member-page {
-    background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 
 .member-sidebar,
 .profile-section,
 .notification-settings {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
+
+// ================================
+// 左側會員資料
+// ================================
 
 .member-profile {
-    padding: 16px 24px 48px 24px;
+  padding: 16px 24px 48px;
 
-    .member-profile-avatar {
-        width: 64px;
-        height: 64px;
-        margin: 48px auto 0px auto;
-    }
+  .member-profile-avatar {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 48px auto 0;
+    object-fit: cover;
+  }
 
-    .member-profile-name {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.2;
+  .member-profile-name {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
 
-        @media (min-width:992px) {
-            font-size: 24px;
-        }
-    }
-
-    .member-profile-email {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #6C757D;
-    }
-
-    .member-nav-link {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #212529;
-    }
+  .member-profile-email {
+    margin-bottom: 8px;
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
 }
+
+// 注意：member-nav 在 HTML 裡不是 member-profile 的子元素，
+// 所以不能把這段寫在 .member-profile 裡。
+.member-nav-link {
+  color: #212529;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+// ================================
+// 基本資料
+// ================================
 
 .profile-section {
-    padding: 48px;
+  padding: 24px;
 
-    .profile-section-title {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 1.2;
-        margin-bottom: 24px;
-    }
+  .profile-section-title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
 
-    .form-label {
-        margin-bottom: 4px;
-    }
+  .form-label {
+    margin-bottom: 4px;
+  }
 
-    .form-label .required {
-        color: #dc3545;
-        margin-left: 4px;
-    }
+  .required {
+    margin-left: 4px;
+    color: #dc3545;
+  }
 
-    .profile-field {
-        gap: 24px;
-    }
+  .form-control,
+  .input-group-text {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+  }
 
-    .form-control,
-    .input-group-text {
-        border: 1px solid #ced4da;
-        border-radius: 8px;
-        padding: 8px 12px;
-    }
+  .input-group .form-control {
+    border-right: 0;
+  }
 
-    .input-group .form-control {
-        border-right: none;
-    }
-
-    .input-group-text {
-        background: #fff;
-        color: #868e96;
-    }
-
+  .input-group-text {
+    background-color: #ffffff;
+    color: #868e96;
+  }
 }
 
+// ================================
+// 通知設定
+// ================================
+
 .notification-settings {
-    padding: 24px 48px;
+  margin-bottom: 24px;
+  padding: 8px;
+}
+
+.notification-settings-body {
+  .notification-settings-title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  > .notification-settings-description {
+    margin-bottom: 24px;
+  }
+}
+
+.notification-settings-list {
+  .form-check {
     margin-bottom: 24px;
 
-    .notification-settings-title {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 1.2;
-        margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    .form-check {
-        margin-bottom: 24px;
-    }
+  .form-check-label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
 
-    .form-check-label {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-    }
+.notification-settings-description {
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
 
-    .notification-settings-description {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #6C757D;
-        margin-top: 4px;
-    }
+// ================================
+// 儲存按鈕
+// ================================
+
+.data-storage-actions {
+  // 讓這一層成為 flex 容器
+  display: flex;
+
+  // 將裡面的按鈕推到主軸最右側
+  justify-content: flex-end;
+
+  // 明確占滿 member-content 的可用寬度
+  width: 100%;
 }
 
 .data-storage-btn {
-    width: 81px;
+  width: 81px;
+}
+
+// ================================
+// 桌機版
+// ================================
+
+@media (min-width: 992px) {
+  .member-profile {
+    .member-profile-name {
+      font-size: 24px;
+    }
+  }
+
+  .profile-section {
+    padding: 48px;
+  }
+
+  .notification-settings {
+    padding: 24px 48px;
+  }
 }
