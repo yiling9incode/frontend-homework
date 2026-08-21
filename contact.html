@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <script type="module" crossorigin src="/main-quest-05/assets/main-4MaZIwgl.js"></script>
+    <link rel="stylesheet" crossorigin href="/main-quest-05/assets/main-Cw7OhsGS.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <nav class="navbar bg-white border-bottom p-0">
+    <div class="container navbar-inner">
+      <!-- logo -->
+      <a class="navbar-brand mb-0 me-0" href="./index.html">
+        <img class="site-logo" src="/main-quest-05/assets/Logo-BVlqBbcd.png" alt="AI ToolVerse">
+      </a>
+
+      <!------------- 桌機導覽區 Dropdown、搜尋欄、會員中心---d-lg-flex------->
+      <div class="desktop-nav d-none d-lg-flex align-items-center flex-grow-1">
+        <div class="dropdown">
+          <!-- 下拉選單 -->
+          <button class="explore-button btn btn-link text-dark text-decoration-none" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            探索 AI 工具<i class="bi bi-chevron-down"></i>
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">內容生成</a></li>
+            <li><a class="dropdown-item" href="#">視覺設計</a></li>
+            <li><a class="dropdown-item" href="#">影像製作</a></li>
+            <li><a class="dropdown-item" href="#">程式開發</a></li>
+            <li><a class="dropdown-item" href="#">教育與學習</a></li>
+            <li><a class="dropdown-item" href="#">資料分析</a></li>
+            <li><a class="dropdown-item" href="#">生產力工具</a></li>
+            <li><a class="dropdown-item" href="#">音樂創作</a></li>
+          </ul>
+        </div>
+
+        <!-- 搜尋欄 -->
+        <form class="input-group desktop-search" role="search">
+          <input class="form-control" type="search" placeholder="輸入工具名稱、功能或關鍵字" aria-label="搜尋 AI 工具">
+          <button class="btn btn-light border" type="submit" aria-label="送出搜尋">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+
+        <!-- 會員中心 -->
+        <a class="member-link btn btn-outline-primary rounded-pill ms-auto" href="./index.html">
+          <i class="bi bi-person" aria-hidden="true"></i>
+          <span>會員中心</span>
+        </a>
+      </div>
+
+      <!------------------ 手機版功能按鈕 ----d-lg-none----------------->
+      <div class="mobile-actions d-flex d-lg-none align-items-center ms-auto">
+
+        <!-- 搜尋按鈕 -->
+        <button class="mobile-action-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch"
+          aria-expanded="false" aria-controls="mobileSearch" aria-label="開啟搜尋">
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+
+        <!-- 漢堡選單按鈕 -->
+        <button class="mobile-action-button btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu" aria-label="開啟選單">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- 手機搜尋欄 Collapse -->
+      <div class="mobile-search collapse d-lg-none w-100" id="mobileSearch">
+        <form class="mobile-search-form input-group" role="search">
+          <!-- 輸入框 -->
+          <input class="form-control" type="search" placeholder="輸入工具名稱、功能或關鍵字" aria-label="搜尋 AI 工具">
+          <!-- 放大鏡按鈕 -->
+          <button class="mobile-search-submit btn btn-light border" type="submit" aria-label="送出搜尋">
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </button>
+          <!-- X按鈕 -->
+          <button class="mobile-search-close btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch"
+            aria-controls="mobileSearch" aria-label="關閉搜尋">
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  </nav>
+  <!-- 手機版 Offcanvas -->
+  <div class="mobile-menu offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <!-- Offcanvas 標題區 -->
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title mb-0" id="mobileMenuLabel">
+        探索 AI 工具
+      </h2>
+      <!-- X按鈕 -->
+      <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="關閉選單"></button>
+    </div>
+
+    <!-- Offcanvas 內容區 -->
+    <div class="offcanvas-body d-flex flex-column">
+      <nav class="list-group">
+        <a class="list-group-item list-group-item-action" href="#">
+          內容生成
+        </a>
+        <a class="list-group-item list-group-item-action" href="#">
+          視覺設計
+        </a>
+        <a class="list-group-item list-group-item-action" href="#">
+          影像製作
+        </a>
+        <a class="list-group-item list-group-item-action" href="#">
+          程式開發
+        </a>
+        <a class="list-group-item list-group-item-action" href="#">
+          教育與學習
+        </a>
+        <a class="list-group-item list-group-item-action" href="#">
+          資料分析
+        </a>
+        <a class="list-group-item list-group-item-action" href="#">
+          生產力工具
+        </a>
+        <a class="list-group-item list-group-item-action" href="#">
+          音樂創作
+        </a>
+      </nav>
+<!-- 登入狀態 -->
+      <!-- 訪客狀態 -->
+      <a class="mobile-menu-account guest-button btn btn-primary rounded-pill mt-auto" href="./login.html">
+        登入/註冊
+      </a>
+
+      <!-- 會員狀態 -->
+      <a class="mobile-menu-account member-button btn btn-primary rounded-pill mt-auto d-none" href="./index.html">
+        <i class="bi bi-person me-2" aria-hidden="true"></i>
+        會員中心
+      </a>
+<!-- 登入狀態 -->
+
+    </div>
+  </div>
+
+</header>    <h1>我是contact</h1>
+    <footer class="site-footer">
+    <div class="footer-container container">
+        <div class="footer-top">
+
+            <!-- Logo -->
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="./index.html" aria-label="返回 AI ToolVerse 首頁">
+                    <img class="footer-logo" src="/main-quest-05/assets/Logo-BVlqBbcd.png" alt="AI ToolVerse">
+                </a>
+            </div>
+
+            <!-- 電子報訂閱 -->
+            <div class="footer-subscription">
+                <p class="footer-subscription-title">訂閱我們，掌握最新 AI 工具與趨勢</p>
+
+                <form class="footer-subscription-form">
+                    <div class="footer-subscription-group input-group rounded-1">
+                        <label class="visually-hidden" for="subscriptionEmail">
+                            電子信箱
+                        </label>
+                        <input class="footer-subscription-input form-control " type="email" id="subscriptionEmail"
+                            name="subscriptionEmail" placeholder="helloworld@gmail.com">
+
+                        <button class="footer-subscription-button btn btn-primary" type="submit">
+                            訂閱
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                Copyright ©2026 AI ToolVerse
+            </p>
+            <p class="footer-rights">
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+  </body>
+</html>
